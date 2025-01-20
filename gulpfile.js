@@ -67,7 +67,7 @@ gulp.task('sass', ['inject-sass'], function(done) {
 // inject dev files to json
 gulp.task('inject-dev', function() {
 
-    gulp.src('./index.html')
+    gulp.src('./about.html')
         .pipe(inject(gulp.src(['./dist/**/*.css'], { read: false }), {
             relative: true,
             name: 'app',
