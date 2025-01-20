@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Twentieth Century Bold";
+    src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot");
+    src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.svg#Twentieth Century Bold") format("svg");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 2rem 6rem;
+    border-bottom: 1px solid grey;
+    position: relative;
+}
+
+.topnav-left,
+.topnav-right {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.topnav-left a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 5rem;
+    padding-right: 10rem;
+    text-align: center;
+    font-family: 'Twentieth Century Bold', sans-serif;
+}
+
+.topnav-right a {
+    text-decoration: none;
+    color: grey;
+    margin: 0 1rem;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.topnav-right a:hover {
+    color: #f78c7b;
+}
+
+.topnav-right a.active {
+    color: #F36661;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+
+.topnav-right a.active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -2.4rem;
+    width: calc(100% + 25px);
+    height: 5px;
+    background-color: #F36661;
+}
+
+.topnav-right .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav-right a {
+        display: none !important;
+    }
+    .topnav-right .icon {
+        display: block !important;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    .topnav-right.responsive {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    .topnav-right.responsive a {
+        display: block !important;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        color: #333;
+    }
+}
