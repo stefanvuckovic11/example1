@@ -72,7 +72,7 @@ nav.topnav .topnav-right a.active::after {
 nav.topnav .topnav-right .icon {
   display: none;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   nav.topnav .topnav-right a {
     display: none !important;
   }
@@ -101,107 +101,13 @@ nav.topnav .topnav-right .icon {
     color: #333;
   }
 }
-@media screen and (max-width: 900px) {
-  nav.topnav .topnav-right a.active::after {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 380px) {
-  nav.topnav .topnav-left {
-    display: none !important;
-  }
-  nav.topnav .topnav-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-  }
-  nav.topnav .topnav-right .icon {
-    display: block !important;
-    font-size: 2rem;
-    align-content: center;
-    margin: auto;
-    cursor: pointer;
-  }
-  nav.topnav .topnav-right.responsive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  nav.topnav .topnav-right.responsive a {
-    display: block !important;
-    font-size: 1.5rem;
-    color: grey;
-    text-decoration: none;
-  }
-  nav.topnav .topnav-right.responsive a:hover, nav.topnav .topnav-right.responsive a.active {
-    background: none !important;
-    color: #F36661;
-  }
-  nav.topnav .topnav-right.responsive .icon {
-    position: fixed;
-    left: 50%;
-    bottom: 2rem;
-    transform: translateX(-50%);
-    z-index: 1000;
-  }
-}
 
 .main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  min-width: 0;
-  grid-template-columns: 1fr 1fr;
+  height: 90vh;
 }
 
 .main-container .profile-image-container {
-  margin-top: 5vh;
-  height: 100vh;
-  border: aqua 1px solid;
-  width: 50%;
-  float: left;
-  margin-right: 2rem;
-  max-width: 50%;
-  min-width: 45%;
-}
-.main-container .profile-image-container .profile-image {
-  aspect-ratio: 1/1.25;
-  float: right;
-  width: 37vh;
-  padding-right: 5vh;
-  color: white;
-}
-
-.main-container .about-container {
-  margin-top: 5vh;
-  height: 100vh;
-  border: aqua 1px solid;
-  width: 50%;
-  float: right;
-}
-
-@media screen and (max-width: 650px) {
-  .profile-image-container {
-    display: none !important;
-  }
-}
-@media screen and (max-height: 650px) {
-  .profile-image-container {
-    display: none !important;
-  }
-  .about-container {
-    width: 100% !important;
-  }
+  padding-top: 2vh;
 }
 
 /*# sourceMappingURL=main.css.map */

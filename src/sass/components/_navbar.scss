@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Twentieth Century Bold";
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot");
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot?#iefix") format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff2") format("woff2"),
+  url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff") format("woff"),
+  url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.ttf") format("truetype"),
+  url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.svg#Twentieth Century Bold") format("svg");
+}
+
+$primary-color: #F36661;
+$hover-color: #f78c7b;
+$text-color: grey;
+$font-main: Arial, sans-serif;
+$font-bold: "Twentieth Century Bold", sans-serif;
+$nav-padding: 2rem 6rem;
+$nav-border-color: grey;
+$nav-active-bottom-spacing: -2.4rem;
+$nav-active-bottom-width: calc(100% + 25px);
+$nav-active-bottom-height: 5px;
+$nav-breakpoint: 900px;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin responsive-nav {
+  @media screen and (max-width: $nav-breakpoint) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+}
+
+
+
+
+nav.topnav {
+  @include flex-center;
+  justify-content: space-between;
+  background: white;
+  padding: $nav-padding;
+  border-bottom: 1px solid $nav-border-color;
+  position: relative;
+
+  .topnav-left,
+  .topnav-right {
+    @include flex-center;
+    width: 100%;
+  }
+
+  .topnav-left {
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding-left: 5rem;
+      padding-right: 10rem;
+      text-align: center;
+      font-family: $font-bold;
+    }
+  }
+
+  .topnav-right {
+    a {
+      text-decoration: none;
+      color: $text-color;
+      margin: 0 1rem;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+
+      &.active {
+        color: $primary-color;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: $nav-active-bottom-spacing;
+          width: $nav-active-bottom-width;
+          height: $nav-active-bottom-height;
+          background-color: $primary-color;
+        }
+      }
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+
+  @include responsive-nav {
+    .topnav-right {
+      a {
+        display: none !important;
+      }
+
+      .icon {
+        display: block !important;
+        margin-left: auto;
+        cursor: pointer;
+      }
+
+      &.responsive {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+
+        a {
+          display: block !important;
+          margin: 1rem 0;
+          font-size: 1.5rem;
+          color: #333;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .topnav-right a.active::after {
+      display: none !important;
+    }
+  }
+
+
+  @media screen and (max-width: 380px) {
+    .topnav-left {
+      display: none !important;
+    }
+
+    .topnav-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      .icon {
+        display: block !important;
+        font-size: 2rem;
+        align-content: center;
+        margin: auto;
+        cursor: pointer;
+      }
+    }
+
+    .topnav-right.responsive {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+
+      a {
+        display: block !important;
+        font-size: 1.5rem;
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+          background: none !important;
+          color: $primary-color;
+        }
+      }
+
+      .icon {
+        position: fixed; // Moves icon to bottom center
+        left: 50%;
+        bottom: 2rem;
+        transform: translateX(-50%);
+        z-index: 1000;
+      }
+    }
+  }
+}

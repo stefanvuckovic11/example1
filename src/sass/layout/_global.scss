@@ -1,0 +1,6 @@
+@use '../base/variables' as variables;
+
+body {
+  font-family: variables.$font-main, sans-serif;
+}
+

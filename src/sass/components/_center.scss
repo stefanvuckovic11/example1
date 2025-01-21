@@ -1,0 +1,50 @@
+@use "../base/mixins";
+@import "../base/variables";
+
+
+
+
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-width: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-container .profile-image-container{
+  margin-top: 5vh;
+  height: 100vh;
+  border: aqua 1px solid;
+  width: 50%;
+  float: left;
+  margin-right: 2rem;
+  max-width: 50%;
+  min-width: 45%;
+
+
+  .profile-image{
+    aspect-ratio: 1 / 1.25;
+    float: right;
+    width: 37vh;
+    padding-right: 5vh;
+    color: white;
+
+
+
+    }
+  }
+
+.main-container .about-container {
+  margin-top: 5vh;
+  height: 100vh;
+  border: aqua 1px solid;
+  width: 50%;
+  float: right;
+}
+
+@include mixins.responsive-profile-image;
+
+
+
