@@ -24,7 +24,7 @@ nav.topnav {
   justify-content: space-between;
   background: white;
   padding: 2rem 6rem;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(107, 102, 128, 0.3);
   position: relative;
 }
 nav.topnav .topnav-left,
@@ -156,43 +156,17 @@ nav.topnav .topnav-right .icon {
   }
 }
 
-.main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  min-width: 0;
-  grid-template-columns: 1fr 1fr;
+@font-face {
+  font-family: "Twentieth Century Bold";
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot");
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff") format("woff"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.svg#Twentieth Century Bold") format("svg");
 }
-
-.main-container .profile-image-container {
-  margin-top: 5vh;
-  height: 100vh;
-  border: aqua 1px solid;
-  width: 50%;
-  float: left;
-  margin-right: 2rem;
-  max-width: 50%;
-  min-width: 45%;
-}
-.main-container .profile-image-container .profile-image {
-  aspect-ratio: 1/1.25;
-  float: right;
-  width: 37vh;
-  padding-right: 5vh;
-  color: white;
-}
-
-.main-container .about-container {
-  margin-top: 5vh;
-  height: 100vh;
-  border: aqua 1px solid;
-  width: 50%;
-  float: right;
-}
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .profile-image-container {
     display: none !important;
+  }
+  .about-container {
+    width: 100% !important;
   }
 }
 @media screen and (max-height: 650px) {
@@ -202,6 +176,129 @@ nav.topnav .topnav-right .icon {
   .about-container {
     width: 100% !important;
   }
+}
+@media screen and (max-width: 1000px) {
+  .rectangle.topright {
+    display: none !important;
+  }
+  .rectangle.botleft {
+    display: none !important;
+  }
+}
+@media screen and (max-height: 710px) {
+  .rectangle.topright {
+    display: none !important;
+  }
+  .rectangle.botleft {
+    display: none !important;
+  }
+}
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-width: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-container .profile-image-container {
+  position: flex;
+  margin-top: 4vh;
+  height: 100vh;
+  width: 50%;
+  float: left;
+  margin-right: 2rem;
+  max-width: 50%;
+  min-width: 45%;
+}
+.main-container .profile-image-container .profile-image {
+  position: relative;
+  aspect-ratio: 1/1.25;
+  float: right;
+  width: 50vh;
+  height: 65vh;
+  padding-right: 5vh;
+  color: white;
+}
+.main-container .profile-image-container .rectangle.topright {
+  margin-top: 10%;
+  margin-left: -2%;
+  position: absolute;
+  top: 5%;
+  left: 39.5%;
+  transform: translate(-25%, -40%);
+  width: 15%;
+  height: 27%;
+  background-color: #F47A65;
+  z-index: -1;
+  border: #F47A65 1px solid;
+  border-radius: 3px;
+}
+.main-container .profile-image-container .rectangle.botleft {
+  margin-top: 38%;
+  margin-left: -22%;
+  position: absolute;
+  top: 5%;
+  left: 39.5%;
+  transform: translate(-25%, -40%);
+  width: 9.5%;
+  height: 20%;
+  background-color: white;
+  z-index: -1;
+  border: #F47A65 3px solid;
+  border-radius: 5px;
+}
+
+.main-container .about-container {
+  margin-top: 5vh;
+  height: 100vh;
+  width: 50%;
+  float: right;
+}
+.main-container .about-container h1 {
+  padding-top: 5vh;
+  padding-left: 5vh;
+  font-family: "Twentieth Century Bold", sans-serif;
+}
+.main-container .about-container #simpleAbout {
+  padding-top: 2vh;
+  padding-left: 5vh;
+  font-family: Arial, sans-serif;
+  margin-right: 15vh;
+  color: grey;
+}
+.main-container .about-container #socials {
+  padding-top: 1vh;
+  padding-left: 5vh;
+  color: grey;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.main-container .about-container a {
+  text-decoration: none;
+}
+.main-container .about-container #socials i {
+  display: flex;
+  margin-right: 1vh;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(107, 102, 128, 0.3);
+  border-radius: 50%;
+  font-size: 14px;
+  color: black;
+}
+.main-container .about-container li {
+  padding-top: 3vh;
+}
+.main-container .about-container #aboutBasics {
+  list-style-type: none;
+  text-decoration: none;
+  padding-left: 5vh;
+  column-count: 2;
+  column-gap: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

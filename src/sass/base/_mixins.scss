@@ -40,9 +40,13 @@
 }
 
 @mixin responsive-profile-image{
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 800px) {
     .profile-image-container{
       display: none !important;
+    }
+    .about-container{
+      width: 100% !important;
+
     }
   }
 
@@ -52,6 +56,26 @@
     }
     .about-container{
       width: 100% !important;
+    }
+  }
+}
+
+@mixin responsive-rectangles{
+  @media screen and (max-width: 1000px){
+    .rectangle.topright{
+      display: none !important;
+    }
+    .rectangle.botleft{
+      display: none !important;
+    }
+  }
+
+  @media screen and (max-height: 710px){
+    .rectangle.topright{
+      display: none !important;
+    }
+    .rectangle.botleft{
+      display: none !important;
     }
   }
 }
