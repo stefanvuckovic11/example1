@@ -18,8 +18,8 @@
     <div class="topnav-right" id="mynav">
         <a class="single" onclick="clickSingleA(this)" href="#home">HOME</a>
         <a class="single" onclick="clickSingleA(this)" href="about.html">ABOUT</a>
-        <a class="single active" onclick="clickSingleA(this)" href="service.html">SERVICE</a>
-        <a class="single" onclick="clickSingleA(this)" href="works.html">WORKS</a>
+        <a class="single" onclick="clickSingleA(this)" href="service.html">SERVICE</a>
+        <a class="single active" onclick="clickSingleA(this)" href="works.html">WORKS</a>
         <a class="single" onclick="clickSingleA(this)" href="#blog">BLOG</a>
         <a class="single" onclick="clickSingleA(this)" href="contact.html">CONTACT</a>
 
@@ -29,53 +29,40 @@
     </div>
 </nav>
 
-
 <section class="layout">
-    <div class="heading">
-        <p>WHAT I DO</p>
+
+    <div class="heading-works">
+        <p>PORTFOLIO</p>
         <h1>
-            My Services
+            My Works
         </h1>
+    </div>
+    <div class="topnav-myworks">
+        <a class="myworks-link" onclick="clickSingleA(this)" href="#">ALL</a>
+        <a class="myworks-link" onclick="clickSingleA(this)" href="#">SLIDESHOW</a>
+        <a class="myworks-link active" onclick="clickSingleA(this)" href="#">VIDEO</a>
+        <a class="myworks-link" onclick="clickSingleA(this)" href="#">IMAGE</a>
+
     </div>
     <div class="services">
         <ul class="services-list">
-            <div class="image-container">
+            <div class="image-container-work">
                 <img src="src/images/graphicdesign.jpg" alt="image">
-                <div class="overlay-text">Graphic Design</div>
+                <div class="overlay-text-work"><b>Keto App Design</b></div>
             </div>
-            <div class="image-container">
+            <div class="image-container-work">
                 <img src="src/images/webdevelopment.jpg" alt="image">
-                <div class="overlay-text">Web Development</div>
+                <div class="overlay-text-work">Marketing Website</div>
             </div>
-            <div class="image-container">
+            <div class="image-container-work">
                 <img src="src/images/mediamarketing.jpg" alt="image">
-                <div class="overlay-text">Media Marketing</div>
-            </div>
-            <div class="image-container">
-                <img src="src/images/Hero - Billboards-1_Desktop.jpeg"  height=300px width=250px
-                     alt="image">
-                <div class="overlay-text">Advertising</div>
-            </div>
-            <div class="image-container">
-                <img src="src/images/game-developer-degree.jpg" alt="image">
-                <div class="overlay-text">Game Development</div>
-            </div>
-            <div class="image-container">
-                <img src="src/images/1_Ra02AqsQlC0KV229EvM98g.jpg" alt="image">
-                <div class="overlay-text">Analytics</div>
+                <div class="overlay-text-work">Keto App Design</div>
             </div>
         </ul>
     </div>
 </section>
-<footer>
-    <a href="#">
-        <div id="to-top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </div>
-    </a>
-</footer>
-
-
 </body>
+
+
 <script type="text/javascript" src="bower_components/jquery/dist/jquery.js?v=1548800917235">
 </script>

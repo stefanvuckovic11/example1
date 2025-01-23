@@ -1,0 +1,138 @@
+@use "../base/mixins";
+@use "../base/variables";
+@import "../base/fonts";
+
+
+
+
+.layout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.heading-works {
+  position: relative;
+  margin: 3vh auto 0 auto;
+  width:50%;
+
+  p {
+    margin-top: 0;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: gray;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    font-family: $font-circular;
+    font-weight: bold;
+    padding: 0 0 1vh;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 40px;
+      height: 4px;
+      background: #F36661;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.layout .topnav-myworks {
+  position: relative;
+  width: 65%;
+  text-align: center;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid grey;
+  box-sizing: border-box;
+  margin: 4% auto -5vh;
+}
+
+.layout .topnav-myworks a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: grey;
+  position: relative;
+  width: 30%;
+  text-align: center;
+  font-size: 0.9rem;
+
+}
+
+.layout .topnav-myworks a:hover {
+  color: #f78c7b;
+}
+
+.layout .topnav-myworks a.active {
+  color: #F36661;
+  font-weight: bold;
+  position: relative;
+}
+
+.layout .topnav-myworks a.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1vh;
+  width: calc(100% + 20px);
+  height: 3px;
+  background-color: #F36661;
+}
+
+
+nav .topnav-right a.active::after {
+  bottom: -5px;
+  width: calc(100% + 25px);
+  height: 3px;
+  background-color: #F36661;
+}
+
+.layout .topnav-myworks a.active::after {
+  bottom: -2.1vh;
+  width: calc(100% + 20px);
+  height: 3px;
+  background-color: #F36661;
+}
+
+.image-container-work {
+  font-family: "Twentieth Century Bold", serif;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition-delay: 1s;
+  :hover{
+    cursor: pointer;
+  }
+}
+
+.image-container-work img {
+  display: block;
+  height: 300px;
+  width: 305px;
+}
+
+.overlay-text-work {
+  top: 50%;
+  left: 50%;
+  padding: 10px 15px;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: $font-dinot;
+  font-weight: normal;
+  text-align: left;
+  border-radius: 2px;
+}

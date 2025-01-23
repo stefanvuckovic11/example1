@@ -1,14 +1,5 @@
-function clickSingleA(clickedLink) {
-    var links = document.querySelectorAll('.topnav-right a');
-    links.forEach(link => {
-        link.classList.remove('active');
-    });
-    clickedLink.classList.add('active');
-}
-
-
 function myFunction() {
-    var x = document.getElementById("mynav");
+    const x = document.getElementById("mynav");
     if (x.className === "topnav-right") {
         x.className += " responsive";
     } else {
@@ -16,6 +7,12 @@ function myFunction() {
     }
 }
 
+function clickSingleA(link) {
+    let parentContainer = link.parentElement;
+    let links = parentContainer.getElementsByTagName("a");
 
-
-
+    for (let i = 0; i < links.length; i++) {
+        links[i].classList.remove("active");
+    }
+    link.classList.add("active");
+}

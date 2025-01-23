@@ -1,5 +1,7 @@
 $font-main: 'Twentieth Century Bold';
 $font-bold: 'Twentieth Century Bold', sans-serif;
+$font-dinot: 'DINOT-Regular';
+$font-circular: 'Circular Std Black';
 
 @font-face {
   font-family: "Twentieth Century Bold";
@@ -9,4 +11,23 @@ $font-bold: 'Twentieth Century Bold', sans-serif;
   url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff") format("woff"),
   url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.ttf") format("truetype"),
   url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.svg#Twentieth Century Bold") format("svg");
+}
+
+@font-face {
+  font-family: "Circular Std Black";
+  src: url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot");
+  src: url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.svg#Circular Std Black")format("svg");
+}
+@font-face {
+  font-family: "DINOT-Regular";
+  src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
+  src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular")format("svg");
 }
