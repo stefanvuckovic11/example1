@@ -79,3 +79,13 @@
     }
   }
 }
+
+
+@mixin underline-works{
+  @media screen and (max-width: 710px) {
+    .layout .topnav-myworks a.active::after {
+      display: none;
+    }
+  }
+}
+

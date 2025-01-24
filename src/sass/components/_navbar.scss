@@ -1,9 +1,6 @@
 @use "../base/mixins";
 @use "../base/variables";
-
-
-
-
+@import "../base/variables";
 
 @mixin flex-center {
   display: flex;

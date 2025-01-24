@@ -1,0 +1,72 @@
+@use "../base/mixins";
+@use "../base/fonts";
+@use "../base/variables";
+@import "../base/fonts";
+
+
+body{
+  background-color: #F7F7F7;
+}
+
+
+
+.flex-headings{
+  font-family: fonts.$font-circular;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: normal;
+  margin-left: 3%;
+}
+
+.layout-content-1{
+  margin-top: 1%;
+  margin-right: 10%;
+  margin-left: 10%;
+  .flex-headings{
+    font-family: fonts.$font-circular;
+    letter-spacing: 1px;
+    font-size: 1em;
+    font-weight: normal;
+    margin-left: 3%;
+  }
+
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .rectangle{
+    background-color: white;
+    text-align: center;
+    margin: 3%;
+    width: 80vh;
+    height: 15vh;
+    border: variables.$thin-border 1px solid;
+    .circle{
+      margin: -4.5vh auto 2vh;
+      display: block;
+      background-color: #FF5C5C;
+      border-radius: 50%;
+      height: 64px;
+      width: 64px;
+        img:first-of-type{
+        width: 48px;
+        height: 48px;
+        padding-top:1vh
+        }
+    }
+    p:nth-child(2){
+      font-weight: bold;
+      font-family: $font-main;
+      color: $text-color;
+      text-decoration: underline;
+    }
+    p:nth-child(3){
+      font-weight: bold;
+      font-family: $font-main;
+    }
+
+  }
+}

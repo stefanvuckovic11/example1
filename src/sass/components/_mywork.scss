@@ -2,6 +2,7 @@
 @use "../base/variables";
 @import "../base/fonts";
 
+@include mixins.underline-works();
 
 
 
@@ -55,9 +56,10 @@
   width: 65%;
   text-align: center;
   padding-bottom: 2vh;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(107, 102, 128, 0.3);
   box-sizing: border-box;
-  margin: 4% auto -5vh;
+  margin-top: 4%;
+  margin-bottom: -3vh;
 }
 
 .layout .topnav-myworks a {
@@ -126,12 +128,20 @@ nav .topnav-right a.active::after {
 
 .overlay-text-work {
   top: 50%;
-  left: 50%;
-  padding: 10px 15px;
   letter-spacing: 1.2px;
-  white-space: nowrap;
+  padding-top: 1vh;
   font-size: 16px;
-  font-family: $font-dinot;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  border-radius: 2px;
+}
+
+.image-container-work p {
+  top: 50%;
+  letter-spacing: 1.2px;
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
   font-weight: normal;
   text-align: left;
   border-radius: 2px;

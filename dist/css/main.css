@@ -461,6 +461,11 @@ footer #to-top {
   src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
   src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff") format("woff"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular") format("svg");
 }
+@media screen and (max-width: 710px) {
+  .layout .topnav-myworks a.active::after {
+    display: none;
+  }
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -508,9 +513,10 @@ footer #to-top {
   width: 65%;
   text-align: center;
   padding-bottom: 2vh;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(107, 102, 128, 0.3);
   box-sizing: border-box;
-  margin: 4% auto -5vh;
+  margin-top: 4%;
+  margin-bottom: -3vh;
 }
 
 .layout .topnav-myworks a {
@@ -577,15 +583,115 @@ nav .topnav-right a.active::after {
 
 .overlay-text-work {
   top: 50%;
-  left: 50%;
-  padding: 10px 15px;
   letter-spacing: 1.2px;
-  white-space: nowrap;
+  padding-top: 1vh;
   font-size: 16px;
-  font-family: "DINOT-Regular";
+  font-family: Arial, sans-serif;
+  text-align: left;
+  border-radius: 2px;
+}
+
+.image-container-work p {
+  top: 50%;
+  letter-spacing: 1.2px;
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
   font-weight: normal;
   text-align: left;
   border-radius: 2px;
+}
+
+@font-face {
+  font-family: "Twentieth Century Bold";
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot");
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff") format("woff"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.svg#Twentieth Century Bold") format("svg");
+}
+@font-face {
+  font-family: "Circular Std Black";
+  src: url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot");
+  src: url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff") format("woff"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.svg#Circular Std Black") format("svg");
+}
+@font-face {
+  font-family: "DINOT-Regular";
+  src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
+  src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff") format("woff"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular") format("svg");
+}
+@font-face {
+  font-family: "Twentieth Century Bold";
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot");
+  src: url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.woff") format("woff"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/90cb7bb668481e6489432e687533592a.svg#Twentieth Century Bold") format("svg");
+}
+@font-face {
+  font-family: "Circular Std Black";
+  src: url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot");
+  src: url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.woff") format("woff"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/f1a22f6f15d272c7aa56da8b2c91f5e5.svg#Circular Std Black") format("svg");
+}
+@font-face {
+  font-family: "DINOT-Regular";
+  src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
+  src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff") format("woff"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular") format("svg");
+}
+body {
+  background-color: #F7F7F7;
+}
+
+.flex-headings {
+  font-family: "Circular Std Black";
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: normal;
+  margin-left: 3%;
+}
+
+.layout-content-1 {
+  margin-top: 1%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+.layout-content-1 .flex-headings {
+  font-family: "Circular Std Black";
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: normal;
+  margin-left: 3%;
+}
+.layout-content-1 .flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.layout-content-1 .rectangle {
+  background-color: white;
+  text-align: center;
+  margin: 3%;
+  width: 80vh;
+  height: 15vh;
+  border: rgba(107, 102, 128, 0.3) 1px solid;
+}
+.layout-content-1 .rectangle .circle {
+  margin: -4.5vh auto 2vh;
+  display: block;
+  background-color: #FF5C5C;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+.layout-content-1 .rectangle .circle img:first-of-type {
+  width: 48px;
+  height: 48px;
+  padding-top: 1vh;
+}
+.layout-content-1 .rectangle p:nth-child(2) {
+  font-weight: bold;
+  font-family: "Twentieth Century Bold";
+  color: grey;
+  text-decoration: underline;
+}
+.layout-content-1 .rectangle p:nth-child(3) {
+  font-weight: bold;
+  font-family: "Twentieth Century Bold";
 }
 
 /*# sourceMappingURL=main.css.map */
