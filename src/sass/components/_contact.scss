@@ -145,10 +145,15 @@ body {
       input:nth-of-type(n+3) {
         width: 100%;
       }
-      input:nth-of-type(n+4) {
+      textarea {
         width: 100%;
+        padding-left: 1vh;
+        padding-top: 1vh;
         height: 20vh;
+        text-align: left;
+        resize: none;
       }
+      padding-bottom: 2vh;
     }
     button{
       align-content: center;

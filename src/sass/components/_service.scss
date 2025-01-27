@@ -33,18 +33,18 @@
       letter-spacing: 1.5px;
       font-family: $font-dinot;
       font-size: 2.5rem !important;
-      padding: 0 0 1vh !important;
       position: relative;
-
       &:after {
         content: "";
+        padding-top: -10% !important;
         width: 40px;
         height: 4px;
         background: #F36661;
         position: absolute;
-        bottom: -25px;
+        bottom: -1.7px;
         left: 50%;
         transform: translateX(-50%);
+
       }
     }
   }
@@ -95,7 +95,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     background-color: #fff;
     color: #000000;
     padding: 10px 15px;
