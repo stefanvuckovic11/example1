@@ -30,11 +30,10 @@
   }
 
   h1 {
+    font-family: $font-dinot;
+    font-size: 2rem;
     margin-top: 0;
-    font-size: 36px;
     letter-spacing: 1.5px;
-    font-family: $font-circular;
-    font-weight: bold;
     padding: 0 0 1vh;
     position: relative;
 
@@ -47,6 +46,7 @@
       bottom: -25px;
       left: 50%;
       transform: translateX(-50%);
+      margin-bottom: 3vh;
     }
   }
 }
@@ -118,12 +118,14 @@ nav .topnav-right a.active::after {
   :hover{
     cursor: pointer;
   }
+
 }
 
 .image-container-work img {
   display: block;
   height: 300px;
   width: 305px;
+  object-fit: cover;
 }
 
 .overlay-text-work {

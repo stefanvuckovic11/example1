@@ -2,6 +2,7 @@
 @use "../base/variables";
 @import "../base/fonts";
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,40 +11,41 @@
   width: 100%;
   text-align: center;
 }
-
-.heading {
-  position: relative;
-  margin: 4vh auto 0 auto;
-  width: 50%;
-  text-align: center;
-
-  p {
-    margin-top: 0;
-    font-family: "Arial Rounded MT Bold", sans-serif;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color: gray;
-    text-align: center;
-  }
-
-  h1 {
-    margin-top: 0;
-    font-size: 36px;
-    letter-spacing: 1.5px;
-    font-family: $font-circular;
-    font-weight: bold;
-    padding: 0 0 1vh;
+.layout {
+  .heading {
     position: relative;
+    margin: 4vh auto 0 auto;
+    width: 50%;
+    text-align: center;
 
-    &:after {
-      content: "";
-      width: 40px;
-      height: 4px;
-      background: #F36661;
-      position: absolute;
-      bottom: -25px;
-      left: 50%;
-      transform: translateX(-50%);
+    p {
+      font-family: $font-circular;
+      color: #666;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      margin-top: -1vh;
+    }
+
+    h1 {
+      margin-top: 0;
+      letter-spacing: 1.5px;
+      font-family: $font-dinot;
+      font-size: 2.5rem !important;
+      padding: 0 0 1vh !important;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 40px;
+        height: 4px;
+        background: #F36661;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -52,7 +54,7 @@
 .services {
   position: relative;
   margin: 4% auto 0 auto;
-  width: 70%;
+  width: 90%;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
