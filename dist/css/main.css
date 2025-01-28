@@ -230,12 +230,19 @@ nav.topnav .topnav-right .icon {
     justify-content: center;
   }
   .main-container .profile-image-container .rectangle.botleft {
-    border: transparent;
+    position: absolute;
+    margin-top: 1%;
+    left: 1%;
+    width: clamp(120px, 18%, 150px);
+    height: clamp(80px, 30%, 200px);
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-color: transparent;
+    z-index: -1;
   }
 }
 .main-container .about-container {
   flex: 1 1 400px;
-  max-width: 100%;
   margin-top: 5vh;
 }
 .main-container .about-container h1 {
@@ -480,6 +487,7 @@ footer #to-top {
   position: relative;
   width: 80%;
   text-align: center;
+  white-space: nowrap;
   padding-bottom: 2vh;
   border-bottom: 1px solid rgba(107, 102, 128, 0.3);
   box-sizing: border-box;
