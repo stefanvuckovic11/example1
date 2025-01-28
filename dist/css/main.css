@@ -176,99 +176,67 @@ nav.topnav .topnav-right .icon {
   src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
   src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff") format("woff"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular") format("svg");
 }
-@media screen and (max-width: 800px) {
-  .profile-image-container {
-    display: none !important;
-  }
-  .about-container {
-    width: 100% !important;
-  }
-}
-@media screen and (max-height: 650px) {
-  .profile-image-container {
-    display: none !important;
-  }
-  .about-container {
-    width: 100% !important;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .rectangle.topright {
-    display: none !important;
-  }
-  .rectangle.botleft {
-    display: none !important;
-  }
-}
-@media screen and (max-height: 710px) {
-  .rectangle.topright {
-    display: none !important;
-  }
-  .rectangle.botleft {
-    display: none !important;
-  }
-}
 .main-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
-  min-width: 0;
-  grid-template-columns: 1fr 1fr;
-}
-
-.main-container .profile-image-container {
-  position: flex;
+  align-items: flex-start;
+  gap: 2rem;
   margin-top: 4vh;
-  height: 100vh;
-  width: 50%;
-  float: left;
   margin-right: 2rem;
-  max-width: 50%;
-  min-width: 45%;
+}
+.main-container .profile-image-container {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 .main-container .profile-image-container .profile-image {
-  position: relative;
-  aspect-ratio: 1/1.25;
-  float: right;
-  width: 50vh;
-  height: 65vh;
-  padding-right: 5vh;
+  display: block;
+  width: 60%;
+  height: auto;
   color: white;
 }
 .main-container .profile-image-container .rectangle.topright {
-  margin-top: 10%;
-  margin-left: -2%;
   position: absolute;
-  top: 5%;
-  left: 39.5%;
-  transform: translate(-25%, -40%);
-  width: 15%;
-  height: 27%;
+  margin-top: -4%;
+  margin-right: -4%;
+  width: 35%;
+  aspect-ratio: 1/1;
   background-color: #F47A65;
   z-index: -1;
-  border: #F47A65 1px solid;
-  border-radius: 3px;
 }
 .main-container .profile-image-container .rectangle.botleft {
-  margin-top: 38%;
-  margin-left: -22%;
   position: absolute;
-  top: 5%;
-  left: 39.5%;
-  transform: translate(-25%, -40%);
-  width: 9.5%;
-  height: 20%;
-  background-color: white;
-  z-index: -1;
-  border: #F47A65 3px solid;
+  margin-top: 60%;
+  left: 35%;
+  width: clamp(120px, 18%, 150px);
+  height: clamp(80px, 30%, 200px);
+  border: 3px solid #F47A65;
   border-radius: 5px;
+  background-color: transparent;
+  z-index: -1;
 }
-
+@media (max-width: 863px) {
+  .main-container .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .profile-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .profile-image-container .rectangle.botleft {
+    border: transparent;
+  }
+}
 .main-container .about-container {
+  flex: 1 1 400px;
+  max-width: 100%;
   margin-top: 5vh;
-  height: 100vh;
-  width: 50%;
-  float: right;
 }
 .main-container .about-container h1 {
   padding-top: 5vh;
@@ -290,9 +258,6 @@ nav.topnav .topnav-right .icon {
   display: flex;
   gap: 10px;
 }
-.main-container .about-container a {
-  text-decoration: none;
-}
 .main-container .about-container #socials i {
   display: flex;
   margin-right: 1vh;
@@ -300,7 +265,7 @@ nav.topnav .topnav-right .icon {
   justify-content: center;
   height: 40px;
   width: 40px;
-  border: 1px solid rgba(107, 102, 128, 0.3);
+  border: 1px solid #ccc;
   border-radius: 50%;
   font-size: 14px;
   color: black;
@@ -682,7 +647,7 @@ body {
   font-family: DINOT-Regular, serif;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  margin-left: 6vh;
+  margin-left: 3%;
 }
 .layout-content-1 .flex-container {
   display: flex;
@@ -746,11 +711,11 @@ body {
   font-family: DINOT-Regular, serif;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  margin-left: 6vh;
+  margin-left: 3%;
 }
 .layout-content-2 .flex-container {
   align-content: center;
-  width: 92%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }

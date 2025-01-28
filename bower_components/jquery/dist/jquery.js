@@ -16,3 +16,6 @@ function clickSingleA(link) {
     }
     link.classList.add("active");
 }
+
+const wrap = document.querySelector('#socials li:nth-child(2)');
+console.log(wrap)

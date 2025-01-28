@@ -3,129 +3,119 @@
 @import "../base/fonts";
 
 
-@include mixins.responsive-profile-image;
-@include mixins.responsive-rectangles;
+
 
 
 .main-container {
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
-  min-width: 0;
-  grid-template-columns: 1fr 1fr;
-}
-
-.main-container .profile-image-container{
-  position: flex;
+  align-items: flex-start;
+  gap: 2rem;
   margin-top: 4vh;
-  height: 100vh;
-  width: 50%;
-  float: left;
   margin-right: 2rem;
-  max-width: 50%;
-  min-width: 45%;
 
-
-  .profile-image{
+  .profile-image-container {
     position: relative;
-    aspect-ratio: 1 / 1.25;
-    float: right;
-    width: 50vh;
-    height: 65vh;
-    padding-right: 5vh;
-    color: white;
+    flex: 1 1 400px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .profile-image {
+      display: block;
+      width: 60%;
+      height: auto;
+      color: white;
     }
 
-  .rectangle.topright {
-    margin-top: 10%;
-    margin-left: -2%;
-    position: absolute;
-    top: 5%;
-    left: 39.5%;
-    transform: translate(-25%, -40%);
-    width: 15%;
-    height: 27%;
-    background-color: #F47A65;
-    z-index: -1;
-    border: #F47A65 1px solid;
-    border-radius: 3px;
-  }
-  .rectangle.botleft {
-    margin-top: 38%;
-    margin-left: -22%;
-    position: absolute;
-    top: 5%;
-    left: 39.5%;
-    transform: translate(-25%, -40%);
-    width: 9.5%;
-    height: 20%;
-    background-color: white;
-    z-index: -1;
-    border: #F47A65 3px solid;
-    border-radius: 5px;
-  }
-  }
 
-.main-container .about-container {
-  margin-top: 5vh;
-  height: 100vh;
-  width: 50%;
-  float: right;
-
-  h1 {
-    padding-top: 5vh;
-    padding-left: 5vh;
-    font-family: $font-bold;
+    .rectangle.topright {
+      position: absolute;
+      margin-top: -4%;
+      margin-right: -4%;
+      width: 35%;
+      aspect-ratio: 1/1;
+      background-color: #F47A65;
+      z-index: -1;
+    }
 
 
+    .rectangle.botleft {
+      position: absolute;
+      margin-top: 60%;
+      left: 35%;
+      width: clamp(120px, 18%, 150px);
+      height: clamp(80px, 30%, 200px);
+      border: 3px solid #F47A65;
+      border-radius: 5px;
+      background-color: transparent;
+      z-index: -1;
+    }
   }
+  @include mixins.about-responsiveness;
 
-  #simpleAbout {
-    padding-top: 2vh;
-    padding-left: 5vh;
-    font-family: Arial, sans-serif;
-    margin-right: 15vh;
-    color: grey;
-  }
+  .about-container {
+    flex: 1 1 400px;
+    max-width: 100%;
+    margin-top: 5vh;
 
-  #socials {
-    padding-top: 1vh;
-    padding-left: 5vh;
-    color: grey;
-    list-style: none;
-    display: flex;
-    gap: 10px;
-  }
-  a{
-    text-decoration: none;
 
-  }
-  #socials i {
-    display: flex;
-    margin-right: 1vh;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    border: 1px solid variables.$thin-border;
-    border-radius: 50%;
-    font-size: 14px;
-    color: black;
-  }
+    h1 {
+      padding-top: 5vh;
+      padding-left: 5vh;
+      font-family: $font-bold;
+    }
 
-  li{
-    padding-top: 3vh;
-  }
+    #simpleAbout {
+      padding-top: 2vh;
+      padding-left: 5vh;
+      font-family: Arial, sans-serif;
+      margin-right: 15vh;
+      color: grey;
+    }
 
-  #aboutBasics{
-    list-style-type: none;
-    text-decoration: none;
-    padding-left: 5vh;
-    column-count: 2;
-    column-gap: 1rem;
-  }
 
+    #socials {
+      padding-top: 1vh;
+      padding-left: 5vh;
+      color: grey;
+      list-style: none;
+      display: flex;
+      gap: 10px;
+
+
+      i {
+        display: flex;
+        margin-right: 1vh;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        font-size: 14px;
+        color: black;
+      }
+    }
+
+
+    li {
+      padding-top: 3vh;
+    }
+
+    #aboutBasics {
+      list-style-type: none;
+      text-decoration: none;
+      padding-left: 5vh;
+      column-count: 2;
+      column-gap: 1rem;
+    }
+  }
 }
+
 
 
 
