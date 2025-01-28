@@ -270,6 +270,9 @@ nav.topnav .topnav-right .icon {
   font-size: 14px;
   color: black;
 }
+.main-container .about-container #socials a {
+  text-decoration: none;
+}
 .main-container .about-container li {
   padding-top: 3vh;
 }
