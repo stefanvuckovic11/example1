@@ -436,12 +436,8 @@ footer #to-top {
   src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot");
   src: url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.woff") format("woff"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/1c587cd97662ab09cb8ba96867f212e7.svg#DINOT-Regular") format("svg");
 }
-@media screen and (max-width: 710px) {
-  .layout .topnav-myworks a.active::after {
-    display: none;
-  }
-}
 .layout {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -492,11 +488,12 @@ footer #to-top {
   border-bottom: 1px solid rgba(107, 102, 128, 0.3);
   box-sizing: border-box;
   margin-top: 4%;
-  margin-bottom: -3vh;
+  margin-bottom: -2vh;
 }
 
 .layout .topnav-myworks a {
-  margin: 0 20px;
+  padding-right: 3vh;
+  margin: 0 auto;
   text-decoration: none;
   color: grey;
   position: relative;
@@ -519,11 +516,16 @@ footer #to-top {
   content: "";
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-60%);
   bottom: 1vh;
-  width: calc(100% + 20px);
+  width: 100% !important;
+  margin: 0 auto;
   height: 3px;
   background-color: #F36661;
+}
+
+.layout .topnav-myworks a.active::after :first-of-type {
+  margin-left: -20px;
 }
 
 nav .topnav-right a.active::after {
@@ -762,10 +764,10 @@ body {
   border: rgba(107, 102, 128, 0.3) 1px solid;
 }
 .layout-content-2 .flex-container button {
-  align-content: center;
-  width: 15%;
+  width: 20%;
   height: 5vh;
-  margin-left: 42.5%;
+  margin: 0 auto;
+  display: block;
   background-color: #FF5C5C;
   border: #FF5C5C 1px solid;
   color: white;
