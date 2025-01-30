@@ -549,15 +549,16 @@ nav .topnav-right a.active::after {
   display: inline-block;
   transition-delay: 1s;
 }
-.image-container-work :hover {
-  cursor: pointer;
-}
 
 .image-container-work img {
   display: block;
   height: 300px;
   width: 305px;
   object-fit: cover;
+}
+.image-container-work img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 .overlay-text-work {

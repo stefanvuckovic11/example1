@@ -96,7 +96,6 @@
   margin: 0 auto ;
   height: 3px;
   background-color: #F36661;
-
 }
 
 .layout .topnav-myworks a.active::after {
@@ -126,10 +125,6 @@ nav .topnav-right a.active::after {
   position: relative;
   display: inline-block;
   transition-delay: 1s;
-  :hover{
-    cursor: pointer;
-  }
-
 }
 
 .image-container-work img {
@@ -137,6 +132,11 @@ nav .topnav-right a.active::after {
   height: 300px;
   width: 305px;
   object-fit: cover;
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+
+  }
 }
 
 .overlay-text-work {
